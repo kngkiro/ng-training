@@ -1,9 +1,9 @@
 <form [formGroup]="jobofferform" (ngSubmit)="onSubmit()">
   <div>
     <label for="timespan"> Zeitspanne </label>
-    <input type="date" id="start" name="start">  
+    <input type="date" id="start" name="start" formControlName="start">  
     bis
-    <input type="date" id="end" name="end"> 
+    <input type="date" id="end" name="end" formControlName="end"> 
   </div>
 
 
