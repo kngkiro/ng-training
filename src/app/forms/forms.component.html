@@ -1,0 +1,38 @@
+<form [formGroup]="jobofferform" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="timespan"> Zeitspanne </label>
+    <input id="timespan" type="text" formControlName="timespan" />
+  </div>
+
+  <div>
+    <label for="name"> Name </label>
+    <input id="name" type="text" formControlName="name" />
+  </div>
+
+  <div>
+    <label for="department"> Abteilung </label>
+    <input id="department" type="text" formControlName="department" />
+  </div>
+
+  <div>
+    <label for="description"> Beschreibung </label>
+    <textarea
+      name="description"
+      cols="40"
+      rows="5"
+      formControlName="description"
+    ></textarea>
+  </div>
+
+  <div>
+    <label for="skills"> Skills </label>
+    <input id="skills" type="text" formControlName="skills" />
+  </div>
+
+  <div>
+    <label for="misc"> Sonstiges </label>
+    <input id="misc" type="text" formControlName="misc" />
+  </div>
+
+  <button class="button" type="submit">Submit Form</button>
+</form>
