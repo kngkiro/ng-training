@@ -14,6 +14,5 @@ export class AppComponent {
 
   title = 'ng-training';
   test = this.localStore.getData("Test")
-
   
 }
