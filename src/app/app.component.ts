@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ng-training2';
-}
+  key: string = 'Name';
+  myItem!: string;
+
+  storeName() {
+    localStorage.setItem(this.key, 'Angular');
+    this.myItem = localStorage.getItem(this.key);
+  }
+  }
