@@ -17,6 +17,7 @@ import { NewphaseComponent } from './instructor/newphase/newphase.component';
 import { NewjobComponent } from './abba/newjob/newjob.component';
 
 import { ApplicationComponent } from './apprentice/application/application.component';
+import { HelpComponent } from './help/help.component';
 
 
 
@@ -30,7 +31,8 @@ import { ApplicationComponent } from './apprentice/application/application.compo
     NewphaseComponent,
     ApplicationComponent,
     NewjobComponent,
-    LandingpageComponent
+    LandingpageComponent,
+    HelpComponent
     ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
 
