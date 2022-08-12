@@ -7,6 +7,13 @@
     
     <div class="row">
       <div class="col-3">
+        <form>
+          <div class="form-group">
+            
+          </div>
+
+
+        </form>
         <div ngbDropdown class="d-inline-block">
           <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Berufsgruppen</button>
           <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
@@ -67,7 +74,7 @@
           <td>{{job.misc}}</td>
 
           <td>
-          <a class="btn btn-success" [routerLink]="['/newphase']"><i class="fa fa-folder-open"></i></a>
+          <a class="btn btn-success" [routerLink]="['/apprentice/application']"><i class="fa fa-folder-open"></i></a>
           </td>
         </tr>
       </tbody>
