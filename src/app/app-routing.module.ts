@@ -9,7 +9,7 @@ import {ApprenticeComponent} from './apprentice/apprentice.component';
 const routes: Routes = [
   { path: 'abba', component: AbbaComponent },
   { path: 'apprentice', component: ApprenticeComponent},
-  { path: '', component: FormsComponent }
+  { path: 'forms', component: FormsComponent }
   ];
 
 
