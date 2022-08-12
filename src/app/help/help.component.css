@@ -1,3 +1,6 @@
+
+
+
 .card{
   background-color: #BDE3FF;
   color:black;
@@ -31,4 +34,12 @@ p {
   text-align: left;
   color: black;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h3{
+  font-size: medium;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color:  #0B41CD;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
