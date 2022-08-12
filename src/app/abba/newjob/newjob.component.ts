@@ -18,11 +18,8 @@ export class NewjobComponent implements OnInit {
     start: '',
     end: '',
     name: '',
-    department: '',
-    description: '',
-    skills: '',
-    misc: '',
-
+    mail: '',
+    motivation: '',
   });
 
   onSubmit(): void {

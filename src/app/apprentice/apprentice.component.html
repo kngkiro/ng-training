@@ -73,7 +73,7 @@
           <td>{{job.misc}}</td>
 
           <td>
-          <a class="btn btn-success" [routerLink]="['/apprentice/application']"><i class="fa fa-folder-open"></i></a>
+          <a class="btn btn-success" [routerLink]="'/apprentice/application'" [queryParams]="{start: job.start, end: job.end}"><i class="fa fa-folder-open"></i></a>
           </td>
         </tr>
       </tbody>
