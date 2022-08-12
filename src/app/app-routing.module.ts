@@ -7,6 +7,8 @@ import {ApprenticeComponent} from './apprentice/apprentice.component';
 import {InstructorComponent} from './instructor/instructor.component';
 
 import {NewphaseComponent} from './instructor/newphase/newphase.component';
+import { NewjobComponent } from './abba/newjob/newjob.component';
+
 import {ApplicationComponent} from './apprentice/application/application.component';
 
 
@@ -17,7 +19,8 @@ const routes: Routes = [
   { path: 'forms', component: FormsComponent },
   { path: 'instructor', component: InstructorComponent},
   { path: 'instructor/newphase', component: NewphaseComponent},
-  { path: 'apprentice/application', component: ApplicationComponent}
+  { path: 'apprentice/application', component: ApplicationComponent},
+  { path: 'abba/newjob', component: NewjobComponent}
   ];
 
 
