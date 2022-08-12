@@ -1,47 +1,31 @@
-<header>
-<!-- Intro settings -->
-<style>
-  /* Default height for small devices */
-  #intro-example {
-    height: 400px;
-  }
+<h1>Welcome to the  <br /> 
+  help center</h1>
+  <div class="cards">
 
-  /* Height for devices larger than 992px */
-  @media (min-width: 992px) {
-    #intro-example {
-      height: 600px;
-    }
-  }
-</style>
-
-
-<!-- Navbar
-<nav class="navbar navbar-light fixed-top shadow-sm">
-  <div class="container">
-      <a class="navbar-brand hover-zoom mr-0" href="#">
-        <img class="w-100" 
-        src="https://raw.githubusercontent.com/kngkiro/ng-training/3054a83cde8964542142300f6c15a2b21eaaa4c7/src/assets/home.svg" width="auto" height="50">
-      </a>
-
-      <p class="text-uppercase" translate-middle>Home</p> 
-
-      <p>
-        <img src="https://raw.githubusercontent.com/kngkiro/ng-training/Frontend/src/assets/rocheicon.png" width="auto" height="30">
-    </p>
+  <div class="card">
+    <h2>Help Center</h2>
+  <p>Zeigt eine Übersicht der Personen, Funktionalitäten und dem Zweck der jeweiligen Kategorien inklusiver kurzer Beschreibung </p>
   </div>
-</nav>
--->
 
-<a
-  routerLink="/forms"
-  routerLinkActive="active"
-  ariaCurrentWhenActive="page"
-></a>
+  <div class="card"> 
+  <h2>Landing Page </h2>
+  <p>Auswahlmöglichkeiten der Positionen (Instructor, Apprentice, ABBA) sowie Informationen zur personalisierten Ausbildung und dem Ausbildungskonzept</p>
+</div>
+  
+<div class="card">
+  <h2>Instructor</h2>
+<p>Der Instructor kann </p>
+</div>
 
-<button routerLink="/abba" routerLinkActive="active" ariaCurrentWhenActive="page">ABBA</button>
-<button routerLink="/apprentice" routerLinkActive="active" ariaCurrentWhenActive="page">Apprentice</button>
-<button routerLink="/instructor" routerLinkActive="active" ariaCurrentWhenActive="page">Instructor</button>
+<div class="card">
+<h2>Apprentice</h2>
+<p>Der Apprentice kann alle möglichen Projekte sehen, die zu seinem Profil passen. Ebenso erhält er Empfehlungen für weitere Praxisphasen. Eine direkte Bewerbung auf Praxisphasen ist über ein Formular möglich </p>
+</div>
 
-<router-outlet></router-outlet>
+<div class="card">
+  <h2>ABBA</h2>
+  <p>Der ABBA kann </p>
+</div>
+</div>
 
 
