@@ -5,6 +5,7 @@ import { FormsComponent } from './forms/forms.component';
 import {AbbaComponent} from './abba/abba.component';
 import {ApprenticeComponent} from './apprentice/apprentice.component';
 import {InstructorComponent} from './instructor/instructor.component';
+import {ApplicationComponent} from './apprentice/application/application.component';
 
 
 
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: 'abba', component: AbbaComponent },
   { path: 'apprentice', component: ApprenticeComponent},
   { path: 'forms', component: FormsComponent },
-  { path: 'instructor', component: InstructorComponent}
+  { path: 'instructor', component: InstructorComponent},
+  { path: 'apprentice/application', component: ApplicationComponent}
   ];
 
 
