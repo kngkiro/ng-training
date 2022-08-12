@@ -3,7 +3,7 @@
   width: 100%;
   padding: 4% 2%;
   box-sizing: border-box;
-  height: 70vh;
+  height: 60vh;
 }
 
 .box {
@@ -53,4 +53,6 @@ span{
   color:#0B41CD;
 }
 
-@font-face { font-family: Delicious; src: url(''); }
+h2{
+  text-align: end;
+}
