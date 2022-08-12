@@ -25,10 +25,10 @@ export class NewphaseComponent implements OnInit {
 
     var currentPhases = this.localStore.getData(phase);
     if(currentPhases != null){
-      var saveString = currentPhases.substring(0,currentPhases.length-1) + "," + JSON.stringify(this.newphase.value) + "}";
+      var saveString = currentPhases.substring(0,currentPhases.length-1) + "," + JSON.stringify(this.newphase.value) + "]";
     }
     else{
-      var saveString = "{" + JSON.stringify(this.newphase.value) + "}";
+      var saveString = "[" + JSON.stringify(this.newphase.value) + "]";
     }
     this.localStore.saveData(phase,saveString);
     this.route.navigate(['/instructor']);

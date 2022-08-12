@@ -10,10 +10,10 @@ import { LocalService } from '../local.service';
 })
 export class InstructorComponent implements OnInit {
 
-  phases = JSON.parse("[" + this.localStore.getData("AI2022")  + "]");
+  phases = JSON.parse(this.localStore.getData("AI2022"));
 
   constructor(private localStore: LocalService) { 
-    console.log(JSON.parse(this.localStore.getData("AI2022")));
+    //console.log(JSON.parse(this.localStore.getData("AI2022")));
   }
 
   
