@@ -1,0 +1,63 @@
+<!-- Load icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<div class="card">
+  <div class="card-header">
+    
+    <div class="row">
+      <div class="col-3">
+        <div ngbDropdown class="d-inline-block">
+          <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Berufsgruppen</button>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button ngbDropdownItem>Angewande Informatik</button>
+            <button ngbDropdownItem>Wirtschaftsinformatik</button>
+            <button ngbDropdownItem>Wirtschaftsingeneurswesen</button>
+            <button ngbDropdownItem>BWL</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div ngbDropdown class="d-inline-block">
+          <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Jahrgang</button>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button ngbDropdownItem>2022</button>
+            <button ngbDropdownItem>2021</button>
+            <button ngbDropdownItem>2020</button>
+            <button ngbDropdownItem>2019</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-3">
+        <button class="btn btn-lg btn-outline-primary"><i class="fa fa-search"></i></button>
+      </div>
+    </div>
+
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Praxisphasen</h5>
+    <button class="btn btn-secondary">Neue Phase</button>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Beginn</th>
+          <th scope="col">Ende</th>
+          <th scope="col">Aktion</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>10.08.2022</td>
+          <td>01.10.2022</td>
+          <td><a routerLink="/forms" routerLinkActive="active" ariaCurrentWhenActive="page">
+                <button class="btn btn-danger">Löschen</button>
+              </a>
+            </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+  <router-outlet></router-outlet>
+</div>

@@ -9,6 +9,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsComponent } from './forms/forms.component';
 import { ApprenticeComponent } from './apprentice/apprentice.component';
+import {InstructorComponent} from './instructor/instructor.component';
+
 
 
 @NgModule({
@@ -17,6 +19,7 @@ import { ApprenticeComponent } from './apprentice/apprentice.component';
     FormsComponent,
     AbbaComponent,
     ApprenticeComponent,
+    InstructorComponent,
     ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
 
