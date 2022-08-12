@@ -1,0 +1,62 @@
+<form [formGroup]="newjob" (ngSubmit)="onSubmit()">
+
+  <div class="form-group">
+    <label for="name"> Studiengang </label>
+    <select class="form-control w-50" name="group" id="group" formControlName="group" required>
+      <option value="AI">AI</option>
+      <option value="WI">WI</option>
+      <option value="WING">WING</option>
+      <option value="BWL">BWL</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="name"> Jahrgang </label>
+    <select class="form-control w-50" name="year" id="year" formControlName="year" required>
+      <option value="2022">2022</option>
+      <option value="2021">2021</option>
+      <option value="2020">2020</option>
+      <option value="2019">2019</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="timespan"> Zeitspanne </label>
+    <input class="form-control w-25" type="date" id="start" name="start" formControlName="start" required>  
+    bis
+    <input class="form-control w-25" type="date" id="end" name="end" formControlName="end" required> 
+  </div>
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input class="form-control w-50" type="text" id="name" name="name" formControlName="name" placeholder="Name" >
+  </div>
+  <div class="form-group">
+    <label for="department">Abteilung</label>
+    <input class="form-control w-50" type="text" id="department" name="department" formControlName="department" placeholder="Abteilung" required>
+  </div>
+  <div class="form-group">
+    <label for="name">Beschreibung</label>
+    <input class="form-control w-50" type="text" id="description" name="description" formControlName="description" placeholder="Beschreibung" required>
+  </div>
+  <div class="form-group">
+    <label for="name">Skills</label>
+    <input class="form-control w-50" type="text" id="skills" name="skills" formControlName="skills" placeholder="Skills" >
+  </div>
+  <div class="form-group">
+    <label for="name">Sonstiges</label>
+    <input class="form-control w-50" type="text" id="misc" name="misc" formControlName="misc" placeholder="Sonstiiges" >
+  </div>
+  
+  <button class="button" type="submit">Submit Form</button>
+  </form>
+  
+  <script type="text/javascript">
+  $(function() {
+    $( "#datepicker" ).datepicker({
+      dateFormat: 'dd-mm-yy',
+      yearRange: "-100:+0",
+      changeMonth: true,
+      changeYear: true
+    });
+  });
+  </script>
+  
+  
