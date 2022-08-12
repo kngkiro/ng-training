@@ -12,6 +12,7 @@ import {NewphaseComponent} from './instructor/newphase/newphase.component';
 import { NewjobComponent } from './abba/newjob/newjob.component';
 
 import {ApplicationComponent} from './apprentice/application/application.component';
+import { HelpComponent } from './help/help.component';
 
 
 
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'instructor/newphase', component: NewphaseComponent},
   { path: 'apprentice/application', component: ApplicationComponent},
   { path: 'abba/newjob', component: NewjobComponent},
+  { path: 'help', component: HelpComponent},
   { path: '', component: LandingpageComponent}
   ];
 
