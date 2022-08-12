@@ -2,119 +2,71 @@
 
 <div class="card-body">
 
-  <form>
+  <form [formGroup]="application" (ngSubmit)="onSubmit()">
 
-  <!-- name -->
-  <div class="row mb-4">
-    <div class="col">
-      <div class="form-outline">
-        <input type="text" id="form6Example1" class="form-control" />
-        <label class="form-label" for="form6Example1">Vorname</label>
-      </div>
-    </div>
-    <div class="col">
-      <div class="form-outline">
-        <input type="text" id="form6Example2" class="form-control" />
-        <label class="form-label" for="form6Example2">Nachname</label>
-      </div>
-    </div>
-  </div>
-
-  <!-- Text input -->
-  <div class="form-outline mb-4">
-    <input type="text" id="form6Example3" class="form-control" />
-    <label class="form-label" for="form6Example3">E-Mail</label>
-  </div>
-
-
-  <!-- type / year -->
+    <!-- type / year -->
     <div class="row mb-4">
-    <div class="col">
-      <div class="form-outline">
-        <select class="form-control" id="exampleFormControlSelect1">
-          <option>AI</option>
-          <option>WI</option>
-          <option>WING</option>
-          <option>BWL</option>
-        </select>
-        <label class="form-label" for="form6Example1">Berufsgruppe</label>
-      </div>
-    </div>
-    <div class="col">
-      <div class="form-outline">
-        <select class="form-control" id="exampleFormControlSelect1">
-          <option>2022</option>
-          <option>2021</option>
-          <option>2020</option>
-          <option>2019</option>
-        </select>
-        <label class="form-label" for="form6Example2">Jahrgang</label>
-      </div>
-    </div>
-  </div>
-
-  <!-- skills -->
-  <div class="row mb-4">
       <div class="col">
         <div class="form-outline">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-            <label class="form-check-label" for="defaultCheck1">
-              Webentwicklung
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-            <label class="form-check-label" for="defaultCheck2">
-              Projektmanagement
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
-            <label class="form-check-label" for="defaultCheck3">
-              Controlling
-            </label>
-          </div>
+          <label class="form-label" for="group">Berufsgruppe</label>
+          <select class="form-control" name="group" id="group" formControlName="group" required>
+            <option>AI</option>
+            <option>WI</option>
+            <option>WING</option>
+            <option>BWL</option>
+          </select>
         </div>
       </div>
       <div class="col">
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
-          <label class="form-check-label" for="defaultCheck4">
-            Prozessanalyse
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="defaultCheck5">
-          <label class="form-check-label" for="defaultCheck5">
-            Marketing
-          </label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" value="" id="defaultCheck6">
-          <label class="form-check-label" for="defaultCheck6">
-            Software-Engineering
-          </label>
+        <div class="form-outline">
+          <label class="form-label" for="year">Jahrgang</label>
+          <select class="form-control" name="year" id="year" formControlName="year" required>
+            <option>2022</option>
+            <option>2021</option>
+            <option>2020</option>
+            <option>2019</option>
+          </select>
         </div>
       </div>
-      <label class="form-label" for="form6Example4">Interessen & Skills</label>
+    </div>
+
+    <!-- name -->
+    <div class="row mb-4">
+      <div class="col">
+        <div class="form-outline">
+        <label class="form-label" for="form6Example1">Name</label>
+          <input class="form-control w-50" type="text" id="name" name="name" formControlName="name" placeholder="Name" >
+        </div>
+      </div>
+    </div>
+
+  <!-- Email -->
+  <div class="form-outline mb-4">
+  <label class="form-label" for="mail">E-Mail</label>
+  <input type="mail" id="mail" class="form-control" name="mail" formControlName="mail" placeholder="mail" >
   </div>
 
   <!-- moitvation -->
   <div class="form-outline mb-4">
-    <textarea class="form-control" id="form6Example7" rows="6"></textarea>
-    <label class="form-label" for="form6Example7">Motivation</label>
+    <label class="form-label" for="motivation">Vorstellung</label>
+    <textarea class="form-control" id="motivation" name="motivation" formControlName="motivation" rows="6"></textarea>
   </div>
 
   <!-- CV -->
   <div class="form-outline mb-4">
-    <input type="file" class="form-control" id="customFile" />
-    <label class="form-label" for="form6Example5">Lebenslauf</label>
+    <label class="form-label" for="cv">Lebenslauf</label>
+    <input type="file" class="form-control" id="cv" name="cv"/>
+  </div>
+
+  <div class="form-group">
+    <input type="text" hidden="hidden"  formControlName="start" >
+    <input type="text" hidden="hidden" formControlName="end" >
+
   </div>
 
   <!-- Submit button -->
   <div class="text-center">
-    <button type="submit" routerLink="/apprentice/application" routerLinkActive="active" class="btn btn-lg btn-primary btn-block mb-12" >Bewerbung absenden</button>
+    <button type="submit"  class="btn btn-lg btn-success btn-block mb-12" >Bewerbung absenden</button>
   </div>
 
   </form>
