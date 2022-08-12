@@ -1,3 +1,40 @@
+<header>
+<!-- Intro settings -->
+<style>
+  /* Default height for small devices */
+  #intro-example {
+    height: 400px;
+  }
+
+  /* Height for devices larger than 992px */
+  @media (min-width: 992px) {
+    #intro-example {
+      height: 600px;
+    }
+  }
+</style>
+
+<button routerLink="/abba" routerLinkActive="active" ariaCurrentWhenActive="page">ABBA</button>
+<button routerLink="/apprentice" routerLinkActive="active" ariaCurrentWhenActive="page">Apprentice</button>
+<!-- <button routerLink="/instructor" routerLinkActive="active" ariaCurrentWhenActive="page">Instructor</button> -->
+
+
+<!-- Navbar -->
+<nav class="navbar navbar-light fixed-top shadow-sm">
+  <div class="container">
+      <a class="navbar-brand hover-zoom mr-0" href="#">
+        <img class="w-100" 
+        src="https://raw.githubusercontent.com/kngkiro/ng-training/3054a83cde8964542142300f6c15a2b21eaaa4c7/src/assets/home.svg" width="auto" height="50">
+      </a>
+
+      <p class="text-uppercase" translate-middle>Home</p> 
+
+      <p>
+        <img src="https://raw.githubusercontent.com/kngkiro/ng-training/NavCmpnt/src/assets/rocheicon.png" width="auto" height="30">
+    </p>
+  </div>
+</nav>
+
 <a
   routerLink="/forms"
   routerLinkActive="active"
@@ -5,3 +42,4 @@
 ></a>
 
 <router-outlet></router-outlet>
+
