@@ -11,6 +11,9 @@ import { FormsComponent } from './forms/forms.component';
 import { ApprenticeComponent } from './apprentice/apprentice.component';
 import {InstructorComponent} from './instructor/instructor.component';
 
+import {NewphaseComponent} from './instructor/newphase/newphase.component';
+import {ApplicationComponent} from './apprentice/application/application.component';
+
 
 
 @NgModule({
@@ -20,6 +23,8 @@ import {InstructorComponent} from './instructor/instructor.component';
     AbbaComponent,
     ApprenticeComponent,
     InstructorComponent,
+    NewphaseComponent,
+    ApplicationComponent
     ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
 
