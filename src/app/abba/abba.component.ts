@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { LocalService } from '../local.service';
+
 
 @Component({
   selector: 'app-abba',
@@ -7,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AbbaComponent implements OnInit {
 
-  constructor() { }
+  jobs = JSON.parse(this.localStore.getData("jobs"));
+
+
+  constructor(private localStore: LocalService) { }
 
   ngOnInit() {
   }

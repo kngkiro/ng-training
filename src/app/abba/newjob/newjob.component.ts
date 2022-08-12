@@ -16,10 +16,26 @@ export class NewjobComponent implements OnInit {
     group:'',
     year:'',
     start: '',
-    end: ''
+    end: '',
+    name: '',
+    department: '',
+    description: '',
+    skills: '',
+    misc: '',
+
   });
 
   onSubmit(): void {
+
+    var currentJobs = this.localStore.getData("jobs");
+    if(currentJobs != null){
+      var saveString = currentJobs.substring(0,currentJobs.length-1) + "," + JSON.stringify(this.newjob.value) + "]";
+    }
+    else{
+      var saveString = "[" + JSON.stringify(this.newjob.value) + "]";
+    }
+    this.localStore.saveData("jobs",saveString);
+    this.route.navigate(['/abba']);
   }
 
   ngOnInit() {
