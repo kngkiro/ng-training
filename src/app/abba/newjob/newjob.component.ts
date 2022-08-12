@@ -22,12 +22,14 @@ export class NewjobComponent implements OnInit {
     motivation: '',
   });
 
+  //Save to LocalStorage
   onSubmit(): void {
-
+    //Check if there already exists a list
     var currentJobs = this.localStore.getData("jobs");
     if(currentJobs != null){
       var saveString = currentJobs.substring(0,currentJobs.length-1) + "," + JSON.stringify(this.newjob.value) + "]";
     }
+    //If not, create List with one element
     else{
       var saveString = "[" + JSON.stringify(this.newjob.value) + "]";
     }

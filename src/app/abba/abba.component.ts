@@ -11,6 +11,7 @@ import { LocalService } from '../local.service';
 export class AbbaComponent implements OnInit {
   oldjobs = JSON.parse(this.localStore.getData('jobs'));
 
+  //Filter for entry matching criteria
   filtercriteria = this.formBuilder.group({
     subject: '',
     startingyear: '',
