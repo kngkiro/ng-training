@@ -23,7 +23,7 @@ const routes: Routes = [
   { path: 'instructor/newphase', component: NewphaseComponent},
   { path: 'apprentice/application', component: ApplicationComponent},
   { path: 'abba/newjob', component: NewjobComponent},
-  { path: 'home', component: LandingpageComponent}
+  { path: '', component: LandingpageComponent}
   ];
 
 
