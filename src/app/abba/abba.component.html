@@ -41,30 +41,33 @@
     <table class="table table-striped">
       <thead>
         <tr>
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
+          <th scope="col">Start</th>
+          <th scope="col">Ende</th>
+          <th scope="col">Studiengang</th>
+          <th scope="col">Jahrgang</th>
+          <th scope="col">Beschreibung</th>
+          <th scope="col">Abteilung</th>
+          <th scope="col">Ansprechpartner</th>
+          <th scope="col">Skills</th>
+          <th scope="col">Sonstiges</th>
+          <th scope="col">Aktion</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
+        <tr *ngFor="let job of jobs">
+          <td>{{job.start}}</td>
+          <td>{{job.end}}</td>
+          <td>{{job.group}}</td>
+          <td>{{job.year}}</td>
+          <td>{{job.description}}</td>
+          <td>{{job.deparment}}</td>
+          <td>{{job.name}}</td>
+          <td>{{job.skills}}</td>
+          <td>{{job.misc}}</td>
+
+          <td>
+          <a class="btn btn-danger" [routerLink]="['/newphase']"> Löschen</a>
+          </td>
         </tr>
       </tbody>
     </table>
