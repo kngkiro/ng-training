@@ -1,57 +1,76 @@
 <!-- Load icon library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
 
 <div class="card">
   <div class="card-header">
-    
-    <div class="row">
+    <form class="row" [formGroup]="filtercriteria" (ngSubmit)="filter()">
       <div class="col-3">
-        <div ngbDropdown class="d-inline-block">
-          <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Berufsgruppen</button>
-          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-            <button ngbDropdownItem>Angewande Informatik</button>
-            <button ngbDropdownItem>Wirtschaftsinformatik</button>
-            <button ngbDropdownItem>Wirtschaftsingeneurswesen</button>
-            <button ngbDropdownItem>BWL</button>
-          </div>
+        <div class="form-group">
+          <label for="Z"> Studiengang </label>
+          <select
+            class="form-control w-50"
+            name="group"
+            id="group"
+            formControlName="subject"
+            required
+          >
+            <option value="AI">AI</option>
+            <option value="WI">WI</option>
+            <option value="WING">WING</option>
+            <option value="BWL">BWL</option>
+          </select>
         </div>
       </div>
       <div class="col-6">
-        <div ngbDropdown class="d-inline-block">
-          <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Jahrgang</button>
-          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-            <button ngbDropdownItem>2022</button>
-            <button ngbDropdownItem>2021</button>
-            <button ngbDropdownItem>2020</button>
-            <button ngbDropdownItem>2019</button>
-          </div>
+        <div class="form-group">
+          <label for="name"> Jahrgang </label>
+          <select
+            class="form-control w-50"
+            name="group"
+            id="group"
+            formControlName="startingyear"
+            required
+          >
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+          </select>
         </div>
       </div>
       <div class="col-3">
-        <button class="btn btn-lg btn-outline-primary"><i class="fa fa-search"></i></button>
+        <button class="btn btn-lg btn-outline-primary" type="submit">
+          <i class="fa fa-search"></i>
+        </button>
       </div>
-    </div>
-
+    </form>
   </div>
   <div class="card-body">
-    <h5 class="card-title">Praxisphasen</h5>
-    <a class="btn btn-secondary" [routerLink]="['/instructor/newphase']"> Neue Phase</a>
+    <a class="btn btn-secondary" [routerLink]="['/instructor/newphase']">
+      Neue Phase</a
+    >
+    <h5 class="card-title">Praxisphasen:</h5>
 
     <table class="table table-striped">
       <thead>
         <tr>
           <th scope="col">Beginn</th>
           <th scope="col">Ende</th>
-          <th scope="col">Aktion</th>
+          <th scope="col">Studiengang</th>
+          <th scope="col">Jahrgang</th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let phase of phases">
-          <td>{{phase.start}}</td>
-          <td>{{phase.end}}</td>
+          <td>{{ phase.start }}</td>
+          <td>{{ phase.end }}</td>
+          <td>{{ phase.group }}</td>
+          <td>{{ phase.year }}</td>
           <td>
-          <a class="btn btn-danger" [routerLink]="['/newphase']"> Löschen</a>
+            <a class="btn btn-danger" [routerLink]="['/newphase']"> Löschen</a>
           </td>
         </tr>
       </tbody>
