@@ -47,16 +47,15 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>10.08.2022</td>
-          <td>01.10.2022</td>
+        <tr *ngFor="let phase of phases">
+          <td>{{phase.start}}</td>
+          <td>{{phase.end}}</td>
           <td>
           <a class="btn btn-danger" [routerLink]="['/newphase']"> My Books</a>
           </td>
         </tr>
       </tbody>
     </table>
-
   </div>
   <router-outlet></router-outlet>
 </div>
