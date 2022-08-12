@@ -1,43 +1,56 @@
 <!-- Load icon library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
 
 <div class="card">
   <div class="card-header">
-    
-    <div class="row">
+    <form class="row" [formGroup]="filtercriteria" (ngSubmit)="filter()">
       <div class="col-3">
-        <div ngbDropdown class="d-inline-block">
-          <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Berufsgruppen</button>
-          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-            <button ngbDropdownItem>Angewande Informatik</button>
-            <button ngbDropdownItem>Wirtschaftsinformatik</button>
-            <button ngbDropdownItem>Wirtschaftsingeneurswesen</button>
-            <button ngbDropdownItem>BWL</button>
-          </div>
+        <div class="form-group">
+          <label for="Z"> Studiengang </label>
+          <select
+            class="form-control w-50"
+            name="group"
+            id="group"
+            formControlName="subject"
+            required
+          >
+            <option value="AI">AI</option>
+            <option value="WI">WI</option>
+            <option value="WING">WING</option>
+            <option value="BWL">BWL</option>
+          </select>
         </div>
       </div>
       <div class="col-6">
-        <div ngbDropdown class="d-inline-block">
-          <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Jahrgang</button>
-          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-            <button ngbDropdownItem>2022</button>
-            <button ngbDropdownItem>2021</button>
-            <button ngbDropdownItem>2020</button>
-            <button ngbDropdownItem>2019</button>
-          </div>
+        <div class="form-group">
+          <label for="name"> Jahrgang </label>
+          <select
+            class="form-control w-50"
+            name="group"
+            id="group"
+            formControlName="startingyear"
+            required
+          >
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+          </select>
         </div>
       </div>
       <div class="col-3">
-        <button class="btn btn-lg btn-outline-primary"><i class="fa fa-search"></i></button>
+        <button class="btn btn-lg btn-outline-primary" type="submit">
+          <i class="fa fa-search"></i>
+        </button>
       </div>
-    </div>
-
+    </form>
   </div>
-  <div class="card-body">
-    <h5 class="card-title">Anfragen aus den Fachbereichen</h5>
-    <p class="card-text">Wirtschaftsingeneurwesen - 2021</p>
 
+  <div class="card-body">
+    <h5 class="card-title">Praxiseinsätze:</h5>
 
     <table class="table table-striped">
       <thead>
@@ -56,18 +69,20 @@
       </thead>
       <tbody>
         <tr *ngFor="let job of jobs">
-          <td>{{job.start}}</td>
-          <td>{{job.end}}</td>
-          <td>{{job.group}}</td>
-          <td>{{job.year}}</td>
-          <td>{{job.description}}</td>
-          <td>{{job.deparment}}</td>
-          <td>{{job.name}}</td>
-          <td>{{job.skills}}</td>
-          <td>{{job.misc}}</td>
+          <td>{{ job.start }}</td>
+          <td>{{ job.end }}</td>
+          <td>{{ job.group }}</td>
+          <td>{{ job.year }}</td>
+          <td>{{ job.description }}</td>
+          <td>{{ job.deparment }}</td>
+          <td>{{ job.name }}</td>
+          <td>{{ job.skills }}</td>
+          <td>{{ job.misc }}</td>
 
           <td>
-          <a class="btn btn-success" [routerLink]="['/newphase']"><i class="fa fa-folder-open"></i></a>
+            <button type="button" class="btn btn-primary">
+              <i class="fa fa-folder-open"></i>
+            </button>
           </td>
         </tr>
       </tbody>
