@@ -8,6 +8,8 @@ import { AbbaComponent } from './abba/abba.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsComponent } from './forms/forms.component';
+import { NewphaseComponent } from './instructor/newphase/newphase.component';
+
 import { ApprenticeComponent } from './apprentice/apprentice.component';
 import { InstructorComponent } from './instructor/instructor.component';
 

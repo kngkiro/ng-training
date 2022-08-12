@@ -1,1 +1,41 @@
-<p>fwef</p>
+<form [formGroup]="newphase" (ngSubmit)="onSubmit()">
+
+<div class="form-group">
+  <label for="name"> Studiengang </label>
+  <select class="form-control" name="group" id="group" formControlName="group" required>
+    <option value="AI">AI</option>
+    <option value="WI">WI</option>
+    <option value="WING">WING</option>
+    <option value="BWL">BWL</option>
+  </select>
+</div>
+<div class="form-group">
+  <label for="name"> Jahrgang </label>
+  <select class="form-control" name="year" id="year" formControlName="year" required>
+    <option value="2022">2022</option>
+    <option value="2021">2021</option>
+    <option value="2020">2020</option>
+    <option value="2019">2019</option>
+  </select>
+</div>
+<div class="form-group">
+  <label for="timespan"> Zeitspanne </label>
+  <input class="form-control w-25" type="date" id="start" name="start" formControlName="start" required>  
+  bis
+  <input class="form-control w-25" type="date" id="end" name="end" formControlName="end" required> 
+</div>
+
+<button class="button" type="submit">Submit Form</button>
+</form>
+
+<script type="text/javascript">
+$(function() {
+  $( "#datepicker" ).datepicker({
+    dateFormat: 'dd-mm-yy',
+    yearRange: "-100:+0",
+    changeMonth: true,
+    changeYear: true
+  });
+});
+</script>
+
