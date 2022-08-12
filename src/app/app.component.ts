@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import {map} from 'rxjs/operators';
 
 
 @Component({
@@ -8,5 +10,13 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'ng-training2';
-}
+  title: any;
+
+
+  constructor (public route: ActivatedRoute) {
+    //changes head title with new path
+    route.url.subscribe(() => this.title = location.pathname.split("/")[1] )
+    
+  }
+  }
+

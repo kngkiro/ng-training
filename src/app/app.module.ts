@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AbbaComponent } from './abba/abba.component';
+import {LandingpageComponent} from './landingpage/landingpage.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,6 +17,7 @@ import { NewphaseComponent } from './instructor/newphase/newphase.component';
 import { NewjobComponent } from './abba/newjob/newjob.component';
 
 import { ApplicationComponent } from './apprentice/application/application.component';
+import { HelpComponent } from './help/help.component';
 
 
 
@@ -28,7 +30,9 @@ import { ApplicationComponent } from './apprentice/application/application.compo
     InstructorComponent,
     NewphaseComponent,
     ApplicationComponent,
-    NewjobComponent
+    NewjobComponent,
+    LandingpageComponent,
+    HelpComponent
     ],
   imports: [BrowserModule, AppRoutingModule, ReactiveFormsModule],
 

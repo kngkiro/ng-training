@@ -50,6 +50,9 @@
   </div>
 
   <div class="card-body">
+    <h5 class="card-title">Anfragen aus den Fachbereichen</h5>
+
+  <div class="card-body">
     <h5 class="card-title">Praxiseinsätze:</h5>
 
     <table class="table table-striped">
@@ -80,9 +83,7 @@
           <td>{{ job.misc }}</td>
 
           <td>
-            <button type="button" class="btn btn-primary">
-              <i class="fa fa-folder-open"></i>
-            </button>
+          <a class="btn btn-success" [routerLink]="'/apprentice/application'" [queryParams]="{start: job.start, end: job.end}"><i class="fa fa-folder-open"></i></a>
           </td>
         </tr>
       </tbody>
