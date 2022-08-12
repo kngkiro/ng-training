@@ -36,7 +36,7 @@
   </div>
   <div class="card-body">
     <h5 class="card-title">Praxisphasen</h5>
-    <button class="btn btn-secondary">Neue Phase</button>
+    <a class="btn btn-secondary" [routerLink]="['/instructor/newphase']"> Neue Phase</a>
 
     <table class="table table-striped">
       <thead>
@@ -50,10 +50,9 @@
         <tr>
           <td>10.08.2022</td>
           <td>01.10.2022</td>
-          <td><a routerLink="/forms" routerLinkActive="active" ariaCurrentWhenActive="page">
-                <button class="btn btn-danger">Löschen</button>
-              </a>
-            </td>
+          <td>
+          <a class="btn btn-danger" [routerLink]="['/newphase']"> My Books</a>
+          </td>
         </tr>
       </tbody>
     </table>
