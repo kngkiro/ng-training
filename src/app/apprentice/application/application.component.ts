@@ -16,7 +16,7 @@ export class ApplicationComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder, private localStore: LocalService, private route: Router, private activatedRoute: ActivatedRoute) {
     activatedRoute.queryParams.pipe(map(params=>params.start)).subscribe(start=>this.application.controls.start.setValue(start));
-     activatedRoute.queryParams.pipe(map(params=>params.end));
+     activatedRoute.queryParams.pipe(map(params=>params.end)).subscribe(end=>this.application.controls.end.setValue(end));
 
   }
 
